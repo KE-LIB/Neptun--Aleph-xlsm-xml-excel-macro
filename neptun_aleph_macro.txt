@@ -1,7 +1,7 @@
 Private Sub CommandButton1_Click()
 Dim i As Integer
 Dim result, faculty As String
-Open "c:\Users\diszterhoft.zoltan\Desktop\shema.xml" For Output As #1
+Open "path of the xml file" For Output As #1
 Write #1, "<p-file-20>"
  For i = 2 To endfile
 If ActiveWorkbook.Worksheets(1).Cells(i, 13) = "Finance form" Then

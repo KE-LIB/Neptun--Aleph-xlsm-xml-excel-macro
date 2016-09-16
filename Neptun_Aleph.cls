@@ -2,40 +2,40 @@ VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
 END
-Attribute VB_Name = "Munka1"
+Attribute VB_Name = "Worksheet1"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 Private Sub CommandButton1_Click()
 Dim i As Integer
-Dim result, szak As String
-Open "c:\Users\diszterhoft.zoltan\Desktop\shema.xml" For Output As #1
+Dim result, Faculty As String
+Open "xml file location" For Output As #1
 Write #1, "<p-file-20>"
 For i = 2 To 2618
-If ActiveWorkbook.Worksheets(1).Cells(i, 13) = "Önköltséges" Then
+If ActiveWorkbook.Worksheets(1).Cells(i, 13) = "Ã–nkÃ¶ltsÃ©ges" Then
     result = "K"
 Else
     result = "A"
 End If
 
-If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Agrár- és Környezettudományi Kar" Then
+If ActiveWorkbook.Worksheets(1).Cells(i, 15) = Faculty" Then
     szak = "51"
 End If
-If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Pedagógiai Kar" Then
-    szak = "63"
+If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Faculty" Then
+   Faculty = "63"
 End If
-If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Rippl-Rónai Mûvészeti Kar" Then
-    szak = "61"
+If ActiveWorkbook.Worksheets(1).Cells(i, 15) = Facultyr" Then
+  Faculty = "61"
 End If
-If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Gazdaságtudományi Kar" Then
-    szak = "55"
+If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Faculty" Then
+    Faculty = "55"
 End If
-If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Állattenyésztési tudományok Doktori Iskola" Then
-    szak = "53"
+If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Faculty" Then
+   Faculty = "53"
 End If
-If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Gazdálkodás- és szervezéstudományok" Then
-    szak = "68"
+If ActiveWorkbook.Worksheets(1).Cells(i, 15) = "Faculty" Then
+    Faculty = "68"
 End If
 Write #1, " <patron-record>"
 Write #1, " <z303>"

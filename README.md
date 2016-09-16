@@ -1,5 +1,5 @@
 # Neptun--Aleph-xlsm-xml-excel-macro
-This macro make from Neptun export readeble xml for Aleph.
+This macro make from Neptun export readeble xml for Aleph.<br>
 1.Make xml file  in the same folder as the xlsm file is.
 2.Download the .cls or .bas file and save it in your computer.
 3.Create an excel file.
